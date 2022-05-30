@@ -1,0 +1,141 @@
+final
+	Class : Can't Overwrite 
+	Method :  Can't Inheritance
+	Object : can't initialise again
+	
+Finally
+ Try Catch block
+ 
+ Finalize();
+	GC is use this to cleanup activity
+	
+String vs Stringbuffer
+
+	String s = new String("Deepak");
+	s.concate("Kankhare");
+	SOPL("s");
+	OUTPUT: Deepak : immutable property
+	
+	StringBuffer s = new StringBuffer("Deepak");
+	s.concate("Kankhare");
+	SOPL("s");
+	OUTPUT:Deepak Kankhare: mutalbe object
+\
+Diff between "==" & .equals();
+	"==" : For referecne and Address comparision
+	".equals()" : For content comparision
+	String s1 = new String ("Deepak");
+	String s2 = new String ("Deepak");
+	SOPL (s1 ==s2); : OUTPUT false
+	SOPL(s1.equals(s2));: OUTPUT True
+
+Various Modifier in Java
+								Outer Classes	Inner classes
+Public
+Private
+Protected
+default
+final
+abstract
+static
+Synchronizer
+native
+strickFp
+transient
+volatile
+	
+StringBuffer vs  StringBuilder
+	StringBuffer every method is synchonized
+	only one thread allowed at a time
+	
+	StringBuilder : multithreaded
+	
+	
+Interface
+	if we don't know about implimentation : example serverlet
+
+Abstract class:
+	Partial implimentation :example : generic serverlet & Http servelet
+	
+Concrete Class	
+	completely ready for implimentation
+	
+Access Specifiers vs Access Modifiers
+	Access Specifiers are not present in Java	
+	Example:
+		Class test
+		{
+			
+		}
+
+System.out.println("Hello");
+
+Class system define in Java.lang package
+	class System{
+		static PrintStream out;
+		}
+	
+	System is a class name
+	Out is static variable name present in System class of type PrintStream
+	println() is a method present in the printstream class
+	
+Main() method :
+	At Runtime JVM checked for main method.
+	NoSuchMethodError: Main
+	
+	In JVM internally instruction are design for search Main method
+
+	Public	static	void	main	(String[] args)
+ 	
+	Public : To call by JVM from anywhere
+	Static : without existing object also JVM has to call this method
+				main method no way  related to any object
+	void : main method woun't return to the JVM
+	main : this is configured in JVM
+	String [] args : For command line argument
+	
+	Oder is acceptable  : static public ...
+	Argument string array is acceptable
+	
+Method Overloading:
+	Same method name different parameter pass.
+	
+Method Overriding 
+	This is not applicable: Method hiding is applicable 
+	
+Inheritance concept applies to main method
+
+Onwords 1.7v Java program must have main method
+It wont be executed if its does not contain main method.
+
+	
+Overloading vs Overriding
+	
+ Two methods are said to be overloaded if and only both method having the same name but diiferent argument type
+	
+   	Example of Overriding
+		Class P {
+			public void property (money, gold, land)
+			{
+			}
+			public void marry ("XYZ");
+			{
+			}
+		class C{
+		  public void marry ("ABC");
+		  
+		}
+  
+		
+	Property						Overloading								Overriding
+method name 			must be same								must be same
+arugment name   	must be different 						must be same
+method signature		must be different 						must be same
+return type				no restriction								must be same
+Access modifiers		No restriction 								Can't be reduce, Increase only
+Know as 					Compile time polymorphism			Runtime Polymorphism
+								Static Polymorphism						Dynamic binding
+								early binding								late binding
+
+ 
+		

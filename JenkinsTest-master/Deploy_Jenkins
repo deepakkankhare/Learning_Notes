@@ -1,0 +1,27 @@
+############# TOMCAT SETUP
+
+Install Tomcat 
+
+# Normal Installation procedure (To start Tomcat)
+    1. Goto folder Tomcat/bin : Click on startup.bat or startup.sh
+    2. Goto CMD Tomcat/bin : Click on startup.bat or startup.sh
+    3. 1. Goto folder Tomcat/bin : Catelina.out start
+
+# To Stop Server
+  1. Goto folder Tomcat/bin : Click on shutdown.bat or shutdown.sh
+  2. Goto CMD Tomcat/bin : Click on shutdown.bat or shutdown.sh
+  3. 1. Goto folder Tomcat/bin : Catelina.out stop
+  
+## Configure Port:
+  <Tomcat install>/ conf/server.xml
+  Connector Port="8080" default value
+  change to required port number
+  restart tomcat
+  
+## How to run an application
+<InstallDir Tomcat> / webapps/
+Put .war file inside the webapps folder e.g Jenkin.war
+restart tomcat
+
+
+  

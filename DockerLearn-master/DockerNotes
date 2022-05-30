@@ -1,0 +1,80 @@
+############# Docker Install ###################
+get.docker.com
+Docker Manual 
+
+* Install on Linux :
+Must have 64x version
+
+
+$ sudo yup -y update
+$ sudo yum install docker 
+$ docker 
+$ docker --version // get version 
+$ sudo service docker start // start service in linux
+$ docker --info
+
+$ sudo usermod -a -G docker ec2 user //add user in docker and group 
+$ docker login //login in as user
+
+$ docker images  //all list of images
+
+$docker ps -a             // list out container
+$sudo service docker stop //stop docker service
+$sudo yum remove docker   //remove docker from system.
+
+
+######################### Basic Commands ##########################
+DOCKER CLIENT / DOCKER SEVER
+******* Images ***********
+$ docker images -q //return docker image id only 
+$ docker pull
+$ docker rmi <image id> //to remove image
+
+*********** container *************
+$ docker ps
+$ docker run <image name>
+$ docker run -it ubuntu // access ubuntu image
+
+
+$ docker start <container ID>
+$ docker stop <container ID> 
+
+********* system *****************
+$ docker stats
+$ docker system df //disk space usage 
+$ docker system prune // Remove to usued data.. Dangling images 
+
+
+########################### DOCKER IMAGES ################################
+$docker images --help
+$ docker pull ubuntu 
+By default later tag is pull
+$ docker pull ubuntu18.04
+18.04 is called tag !
+
+$ docker images -q  // only show image ID
+$ docker images -f  "dangling=false"  //filter option
+$$ docker inspect <image name> 
+
+
+####################### DOCKER CONTAINERS #################################
+Containers are running instances of Image
+----------------------------------------------------------
+|    Client             Docker_HOST            Registry    |
+| .Client Build        Docker Deamon             Images    |
+| .Docker Pull       Containers Images                     |
+| .Docker Run                                              |
+| ----------------------------------------------------------
+
+
+$ docker run <image-name>
+$ docker ps       //list out all the containers
+$ docker run --name <CustomeNmae> it <image name>
+
+$ docker top <Containter ID/Name>
+$ docker stats <Container ID/Name>
+
+$ docker attach <Container ID | name>
+$ docker kill <container ID |name>
+$ docker rm <container ID | name>   //to remove
+

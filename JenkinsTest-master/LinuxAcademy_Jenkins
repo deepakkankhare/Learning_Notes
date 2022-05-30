@@ -1,0 +1,31 @@
+#Linux Academy
+
+1. Install Jenkins
+2. Configure Firewall
+	add port 8080/tcp
+
+
+3. Set up Proxy server
+		Install nginx server
+		config {
+			location /{
+							Add Jenkins location
+			}
+		}
+4. restart service systmctl start nginx service
+
+5. hit url from browser
+
+6. unlock Jenkins : input adminstrator Password
+
+7. Create user adminstrator
+
+ 8. $ getent passwd jenkins //command  to  see the Jenkins   passwd
+ 
+ 9. $sudo passwd Jenkins //command to change password
+ 
+ 10. $visudo  // add jenkins access
+ 
+ 11. ssh-copy-id jenkins@serverIP
+ 
+ 

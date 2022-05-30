@@ -1,0 +1,50 @@
+########### Jenkins on Docker ##################
+
+1. Goto DockerHub 
+2. search for Jenkins
+  $ docker pull jenkins 
+  $ docker images
+
+*** create container ***
+$ docker run -p 8080:8080 -p 50000:50000 Jenkins
+    * first 8080: expose port on Host
+    * second 8080 : expose the port on container
+    * first 50000 for host machine
+    * second 50000 for Jenkins images 
+$ docker run -p 8080:8080 -p 50000:50000 -v /<USER_HOME_DIRECTORY>/var/Jenkins_home Jenkins
+  * -v specify the path where user want to store the Jenkins path
+
+
+$ docker run --name MyJenkins -p 8080:8080 -p 50000:50000 -v /<USER_HOME_DIRECTORY>/var/Jenkins_home Jenkins
+
+1. Localhost:8080
+2. configure Jenkin 
+3. Configure Plugins
+4. Start Using Jenkins
+5. Set user and password
+
+
+################################ Jenkins ####################
+1. Create Job (FreeStyle)
+
+
+$ docker volume create My_jenkins
+
+$$ docker run -p 8080:8080 -p 50000:50000 -v My_Jekins/var/Jenkins_home (Volume Name) Jenkins
+  * -v specify the path where user want to store the Jenkins path
+  
+#################### Docker Dockfile ###########################
+
+
+
+
+
+###################### Docker Compose #############################
+
+
+####################### Docker Volumn #############################
+
+
+
+###################### Docker Swarm ###########################
+  

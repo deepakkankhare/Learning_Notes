@@ -1,0 +1,64 @@
+
+Git is Version Control System. Used to maintain all version history. Track Changes on files and Folders
+
+A. Centralized Version Control System (Git)
+B. Distributed Version Control System (GitHub)
+
+##### COMMANDS: (Local)
+  1. git --version \\To get version 
+  2. git init \\To init Repo
+  3. git status 
+  5. git add <FILENAME> /. 
+  6. git commint -m "<MESSAGE>" 
+
+###### Configure Git for Remote.
+$ git config --global user.email ="deepak.kankhare@gmail.com"
+$ git config --global user.name= "deepakakakhare"
+
+####### For Remote Repositoy: 
+Login into GitHub Repository: (Type of Repo Public/ Private)
+
+  7.  git remote add origin "URL GitHUB"+
+  8.  git push -u origin master(Branch Name)
+  9.  git log   \\to see checksum number
+  10. git --help "Command Name"
+   * git full 
+
+### CREATE BRANCH
+
+  11. git branch <BRANCH NAME>
+  12. git checkout <BRANCH NAME> //after creating branch need to create checkout branch e.g MyNewBranch
+  12. git push -u origin MyNewBranch
+  
+### MERGE BRANCH 
+  13.git checkout Master
+  14.git merge MynewBranch
+
+### DELETE BRANCH
+  15.git branch -d <BRANCH NAME>  //to delete local only
+  16.git push origin --delete MyNewBranch //to delete from remote
+  
+#### Git restore
+git restore . // to restore all the deleted files
+### Email Notification 
+* Go to GitHub.com /login
+*  setting 
+* Install and Integrations 
+* services : add email 
+
+#### Git Tags
+Used to create references to maintain History.
+  1. git checkout <BRANCH NAME>   //e.g Master /MyNewBranch
+  2. git tag <tag name>
+  3. git tag -a v1.1 -m "Tag for release ver 1.1"    //-a anotted tags to asso with message
+  4. git tag -l "v1.*"    \\list of tag start witg v1
+  5. git push origin <tag name>  //push my tag to remote repo
+  6. git push --tag //push all tag in remote at onces
+  7. git tag -d <tag name> 
+  8. git tag --delete <tag name>
+  9. git tag -d origin <Tag Name>
+
+### Check out branch with the help of tag
+  10.git checkout -b <BRANCH NAME> <Tag name>
+  
+

@@ -1,0 +1,20 @@
+#Git Hub Plugin
+#Source Code Managment
+
+1. Select Git
+#must have git on the machine
+
+2 Remote Gihub Project
+
+3. GitHub project : add url 
+
+4.  branch as master
+5. save
+
+
+#########################
+Additional Behviours
+	checkout a sub Directory
+
+##########################
+schedule Build

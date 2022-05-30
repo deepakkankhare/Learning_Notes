@@ -1,0 +1,39 @@
+#Jenkis first Build Project
+
+1. Create freestyle project
+2. Task to get log file 
+3. build 
+	Execute shell
+	sudo cat/var/log/message
+4. save
+5. build now
+6.check status
+#########################################
+Plugin : Depedancy on one other
+Example: 
+	Install Plugin : SSH
+	Need restart Jenkins
+	Manage Plugin : Install tab
+		Configure:(Master )
+			hostname: localhost
+			port :22
+			credentials : jenkins
+			
+		Configure(Slave)
+		hostname: slave IP adress
+		port:22
+		credentials :Add credential : kind : SSH Username with Private Key
+		 
+To get private key: 
+$sudo cat /var/lib/jenkins/.ssh/id_rsa
+copy & paste in to field
+
+#build for Remote machine
+Example RemotelogViewer
+
+create new  item
+Build
+execute shell script on remote host using ssh
+
+ssh site jenkins@remote Machine IP
+command: sudo cat /var/log/messages
